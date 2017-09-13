@@ -1,0 +1,32 @@
+{
+  "name": "AttributeConfig",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "attributeId": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "attributePropertyConfigs": {
+      "type": "hasMany",
+      "model": "AttributePropertyConfig",
+      "foreignKey": ""
+    },
+    "attributeTagConfigs": {
+      "type": "hasMany",
+      "model": "AttributeTagConfig",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Configuration",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "configKey": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "ConfigurationHasFilter": {
+      "type": "hasAndBelongsToMany",
+      "model": "Filter",
+      "foreignKey": ""
+    },
+    "attributeConfigs": {
+      "type": "hasMany",
+      "model": "AttributeConfig",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
